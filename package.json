@@ -1,0 +1,26 @@
+{
+  "name": "the-compliment-project",
+  "version": "1.0.0",
+  "description": "this is the third prototype of the compliment project",
+  "main": "express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node express.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingnali7/the-compliment-project.git"
+  },
+  "author": "Mingna Li",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mingnali7/the-compliment-project/issues"
+  },
+  "homepage": "https://github.com/mingnali7/the-compliment-project#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
