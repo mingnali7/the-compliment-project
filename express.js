@@ -25,9 +25,9 @@ app.set('views', __dirname);
 
 // getting database
 var client = new Client({
-  database: 'compliment'
-  // connectionString: process.env.DATABASE_URL,
-  // ssl: true,
+  // database: 'compliment'
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
 });
 
 client.connect();
@@ -91,6 +91,6 @@ app.get("/5", function (req, res) {
   res.sendFile(path.join(__dirname + '/5thankyou.html'))
 })
 
-app.listen(8000, function () {
+app.listen(process.env.PORT || 8000, function () {
   console.log("server is up")
 })
