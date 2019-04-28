@@ -27,9 +27,14 @@
 <body>
 
   <div id="main">
-    <p>You're as good as a whiskey sour with bourbon</p>
+    {{#old}}
+    <p>{{message}}</p>
+    {{/old}}
   </div>
-  <button id="button">next</button>
+  <button onclick="location.href='3'" id="button">next</button>
+
+
+
 
 
 </body>
