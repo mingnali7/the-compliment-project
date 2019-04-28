@@ -72,8 +72,14 @@ app.get("/3", function (req, res) {
 })
 
 app.post("/post", function (req, res) {
-  console.log(req.body.newcomp)
-  res.render('4typing', {
+  let newpost = req.body.newcomp
+  client.query('INSERT INTO posts (message) VALUES ($1)', [newpost], function (err, res) {
+    if (err) {
+      console.log(err)
+    }
+    console.log("succeed")
+  })
+  res.render('5thankyou', {
     post: req.body.newcomp
   })
 })
@@ -82,7 +88,7 @@ app.get("/4", function (req, res) {
 })
 
 app.get("/5", function (req, res) {
-  res.sendFile(path.join(__dirname + '/5thank-you.html'))
+  res.sendFile(path.join(__dirname + '/5thankyou.html'))
 })
 
 app.listen(8000, function () {
