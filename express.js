@@ -26,9 +26,9 @@ app.set('views', __dirname);
 
 // getting database
 var client = new Client({
-  database: 'compliment'
-  // connectionString: process.env.DATABASE_URL,
-  // ssl: true,
+  // database: 'compliment'
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
 });
 
 client.connect();
