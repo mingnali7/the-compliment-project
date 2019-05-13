@@ -21,18 +21,34 @@
       left: 70%;
       font-size: 12px;
     }
+
+    #stickman {
+      position: absolute;
+      right: 62%;
+      top: 39%;
+
+    }
   </style>
 </head>
 
 <body>
-
+  <script>
+    setTimeout(function () {
+      window.location.href = "/"
+    }, 30000)
+  </script>
+  <div id="stickman">
+    <img
+      src="https://static1.squarespace.com/static/5bda94ab1aef1daffa47383e/t/5cd99d104785d37dd32a31dd/1557765392463/love.png?format=1000w"
+      width="165" height="231">
+  </div>
   <div id="main">
     <p>Your compliment is saved</p>
     {{post}}
-    <p>The world just become slightly better because of you</p>
+    <p>Thank you!</p>
   </div>
   <!-- <button id="button">get another compliment</button> -->
-  <button onclick="location.href='2'" id="button">get another compliment</button>
+  <!-- <button onclick="location.href='2'" id="button">get another compliment</button> -->
 
 
 </body>

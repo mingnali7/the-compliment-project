@@ -8,17 +8,11 @@
     #main {
       text-align: center;
       position: absolute;
-      top: 48%;
+      top: 46%;
       /* left: 50%; */
       width: 100%;
       font-size: 20px;
       font-family: Helvetica;
-    }
-
-    #stickman {
-      position: absolute;
-      top: -69%;
-      left: -3%;
     }
 
     #button {
@@ -27,25 +21,28 @@
       left: 70%;
       font-size: 12px;
     }
+
+    #stickman {
+      position: absolute;
+      right: 62%;
+      top: 39%;
+
+    }
   </style>
 </head>
 
 <body>
+  <script>
+    setTimeout(function () {
+      window.location.href = "/"
+    }, 7000)
+  </script>
 
   <div id="main">
-    {{#old}}
-    <p>{{message}}</p>
-    {{/old}}
-    <div id="stickman">
-      <img
-        src="https://static1.squarespace.com/static/5bda94ab1aef1daffa47383e/t/5cd9972f9b747a265112130d/1557763887425/kneel.png?format=1000w"
-        width="150" height="210">
-    </div>
+    <p>Thank you</p>
   </div>
-  <button onclick="location.href='3'" id="button">next</button>
-
-
-
+  <!-- <button id="button">get another compliment</button> -->
+  <!-- <button onclick="location.href='2'" id="button">get another compliment</button> -->
 
 
 </body>

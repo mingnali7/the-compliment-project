@@ -6,6 +6,7 @@ var mustacheExpress = require('mustache-express');
 let path = require('path')
 var bodyParser = require('body-parser')
 
+
 // make an array that has 10 compliments
 let compArray = ["you're smart", "you're beautiful", "you're handsome"];
 
@@ -25,9 +26,9 @@ app.set('views', __dirname);
 
 // getting database
 var client = new Client({
-  // database: 'compliment'
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  database: 'compliment'
+  // connectionString: process.env.DATABASE_URL,
+  // ssl: true,
 });
 
 client.connect();
@@ -70,6 +71,9 @@ app.get("/2", function (req, res) {
 app.get("/3", function (req, res) {
   res.sendFile(path.join(__dirname + '/3question.html'))
 })
+app.get("/meow", function (req, res) {
+  res.sendFile(path.join(__dirname + '/3acool.html'))
+})
 
 app.post("/post", function (req, res) {
   let newpost = req.body.newcomp
@@ -79,10 +83,13 @@ app.post("/post", function (req, res) {
     }
     console.log("succeed")
   })
+
   res.render('5thankyou', {
     post: req.body.newcomp
   })
+
 })
+
 app.get("/4", function (req, res) {
   res.sendFile(path.join(__dirname + '/4typing.html'))
 })
