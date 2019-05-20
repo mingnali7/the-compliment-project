@@ -18,7 +18,7 @@ app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
   extended: true
 }));
-
+app.use(express.static('public'))
 // establish the mustache thing
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
@@ -26,9 +26,9 @@ app.set('views', __dirname);
 
 // getting database
 var client = new Client({
-  // database: 'compliment'
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  database: 'compliment'
+  // connectionString: process.env.DATABASE_URL,
+  // ssl: true,
 });
 
 client.connect();
